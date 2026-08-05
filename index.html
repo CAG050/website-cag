@@ -8,8 +8,8 @@
     <style>
         /* Basic, contained styles to make the one-pager more attractive */
         :root{
-            --accent:#c62828;
-            --accent-2:#00695c;
+            --accent:#2e7d32; /* green for titles and primary actions */
+            --accent-2:#00695c; /* secondary color for navbar */
             --muted:#556;
             --bg:#f6f8f9;
             --card:#ffffff;
@@ -22,19 +22,23 @@
         .nav-links a:hover{background:rgba(0,0,0,0.08)}
 
         .hero{padding:3.5rem 1.5rem;text-align:center;background:linear-gradient(90deg,#e8f5e9 0%, #e0f7fa 100%);}
-        .hero h1{font-size:2.6rem;color:var(--accent-2);margin:0}
+        .hero h1{font-size:2.6rem;color:var(--accent);margin:0}
         .hero p.lead{font-size:1.05rem;color:var(--muted);max-width:900px;margin:1rem auto}
         .btn{display:inline-block;margin-top:1rem;background:var(--accent);color:#fff;padding:0.6rem 1rem;text-decoration:none;border-radius:6px}
 
         .content{padding:2rem 1.25rem;max-width:1000px;margin:0 auto}
         .section{margin-bottom:1rem}
         .section-title{font-size:1.4rem;color:var(--accent);margin-bottom:0.5rem}
-        .card{background:var(--card);Padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(17,17,17,0.06);margin-bottom:1rem}
+        .card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(17,17,17,0.06);margin-bottom:1rem}
         ul.actions{padding-left:1.2rem}
         .highlight{font-weight:600;color:var(--accent-2)}
 
         .press-links a{display:block;color:var(--accent-2);text-decoration:none;margin-bottom:0.35rem}
         .press-links a:hover{text-decoration:underline}
+
+        .qr-wrapper{display:flex;align-items:center;gap:1rem;margin-top:0.75rem}
+        .qr-wrapper img{width:180px;height:180px;object-fit:contain;border-radius:8px;border:4px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,0.08)}
+        .qr-text{font-size:0.98rem;color:#222}
 
         footer{padding:1rem;text-align:center;color:#666;background:transparent;margin-top:1.5rem}
 
@@ -42,6 +46,8 @@
         @media (max-width:600px){
             .hero h1{font-size:1.8rem}
             .nav-links{display:none}
+            .qr-wrapper{flex-direction:column;align-items:flex-start}
+            .qr-wrapper img{width:140px;height:140px}
         }
     </style>
 </head>
@@ -63,7 +69,7 @@
     <section id="home" class="hero">
         <h1>Collectief Activisme Groningen</h1>
         <p class="lead">Het systeem is niet stuk. Het doet precies waarvoor het gebouwd is: groeien ten koste van ons land, ons voedsel, onze tijd. Collectief Activisme wacht niet met stoppen met wachten tot iemand het oplost: samen komen we verder. Met activisme en collectieve acties.</p>
-        <a href="#watdoenwij" class="btn">Doe mee — begin vandaag</a>
+        <a href="#contact" class="btn">Join het Signal-kanaal</a>
     </section>
 
     <main class="content">
@@ -111,7 +117,14 @@
             <div class="card">
                 <h2 class="section-title">Contact</h2>
                 <p>Wil je met ons samenwerken of heb je een vraag? Stuur een bericht via onze Signal-groep of e-mail (link hieronder).</p>
-                <p><strong>E-mailadres:</strong> <a href="mailto:info@collectiefactivismegroningen.org">info@collectiefactivismegroningen.org</a></p>
+
+                <div class="qr-wrapper">
+                    <!-- Place the QR code image in the repository at the path 'images/signal-qr.png' or adjust the src accordingly -->
+                    <img src="images/signal-qr.png" alt="Signal QR-code">
+                    <div class="qr-text">Op de hoogte blijven van acties in en rondom Groningen? <strong>Join het Signal-kanaal</strong></div>
+                </div>
+
+                <p style="margin-top:1rem;"><strong>E-mailadres:</strong> <a href="mailto:contact@collectiefactivisme050.nl">contact@collectiefactivisme050.nl</a></p>
             </div>
         </section>
 
