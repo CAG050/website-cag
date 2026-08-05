@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collectief Activisme Groningen</title>
-    <!-- Link naar je CSS bestand -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Basic, contained styles to make the one-pager more attractive */
+        :root{
+            --accent:#c62828;
+            --accent-2:#00695c;
+            --muted:#556;
+            --bg:#f6f8f9;
+            --card:#ffffff;
+        }
+        body{font-family:Inter, Arial, Helvetica, sans-serif;line-height:1.6;margin:0;background:var(--bg);color:#111}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:var(--accent-2);color:#fff;position:sticky;top:0}
+        .logo{font-weight:700}
+        .nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+        .nav-links a{color:rgba(224,242,241,0.95);text-decoration:none;padding:0.35rem 0.6rem;border-radius:4px}
+        .nav-links a:hover{background:rgba(0,0,0,0.08)}
+
+        .hero{padding:3.5rem 1.5rem;text-align:center;background:linear-gradient(90deg,#e8f5e9 0%, #e0f7fa 100%);}
+        .hero h1{font-size:2.6rem;color:var(--accent-2);margin:0}
+        .hero p.lead{font-size:1.05rem;color:var(--muted);max-width:900px;margin:1rem auto}
+        .btn{display:inline-block;margin-top:1rem;background:var(--accent);color:#fff;padding:0.6rem 1rem;text-decoration:none;border-radius:6px}
+
+        .content{padding:2rem 1.25rem;max-width:1000px;margin:0 auto}
+        .section{margin-bottom:1rem}
+        .section-title{font-size:1.4rem;color:var(--accent);margin-bottom:0.5rem}
+        .card{background:var(--card);Padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(17,17,17,0.06);margin-bottom:1rem}
+        ul.actions{padding-left:1.2rem}
+        .highlight{font-weight:600;color:var(--accent-2)}
+
+        .press-links a{display:block;color:var(--accent-2);text-decoration:none;margin-bottom:0.35rem}
+        .press-links a:hover{text-decoration:underline}
+
+        footer{padding:1rem;text-align:center;color:#666;background:transparent;margin-top:1.5rem}
+
+        /* Small screens */
+        @media (max-width:600px){
+            .hero h1{font-size:1.8rem}
+            .nav-links{display:none}
+        }
+    </style>
 </head>
 <body>
 
@@ -14,27 +52,71 @@
         <nav class="navbar">
             <div class="logo">Collectief Activisme Groningen</div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">Over Ons</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#watdoenwij">Wat doen wij?</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hoofdinhoud (Hero Sectie) -->
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>Collectief Activisme Groningen</h1>
-        <p>Ik wil hier nu wat anders.</p>
-        <a href="about.html" class="btn">Een knop bijvoorbeeld</a>
+        <p class="lead">Het systeem is niet stuk. Het doet precies waarvoor het gebouwd is: groeien ten koste van ons land, ons voedsel, onze tijd. Collectief Activisme wacht niet met stoppen met wachten tot iemand het oplost: samen komen we verder. Met activisme en collectieve acties.</p>
+        <a href="#watdoenwij" class="btn">Doe mee — begin vandaag</a>
     </section>
 
-    <!-- Extra sectie -->
-    <section class="content">
-        <h2>Actie-agenda</h2>
-        <p>21-06-2026 - Vluchtelingen solidariteitsdemo</p>
-    </section>
+    <main class="content">
+        <section class="section">
+            <div class="card">
+                <h2 class="section-title">Onze boodschap</h2>
+                <p>Genoeg leeggepompt, genoeg leeggezogen, genoeg mooie woorden. We komen in actie.</p>
+                <p class="highlight">Kies een kant en doe mee. Begin vandaag al, want wij zijn met meer!</p>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section id="watdoenwij" class="section">
+            <div class="card">
+                <h2 class="section-title">Wat doen wij?</h2>
+                <ul class="actions">
+                    <li>We verbinden verschillende activistische en collectieve groeperingen in Groningen.</li>
+                    <li>We organiseren verschillende keren per jaar demonstraties.</li>
+                    <li>We helpen je je activistische of collectieve boodschap te verspreiden.</li>
+                </ul>
+                <p>Podium nodig? Geluid? Publieksbegeleiding? Een goede spreker of contact met andere partijen? Meer bereik door een bericht in onze Signal-groep of een persbericht? Meedenkkracht nodig voor een vergunning? Geld? Of gewoon je demonstratie nóg succesvoller maken? Neem contact met ons op en we denken — maar vooral doen — met je mee!</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2 class="section-title">Je kunt Collectief Activisme Groningen kennen van</h2>
+                <ul>
+                    <li>De Straat Op</li>
+                    <li>De Rode Lijn-demo’s in Groningen</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2 class="section-title">In de pers</h2>
+                <div class="press-links">
+                    <a href="https://www.rtvnoord.nl/politiek/1305322/de-straat-op-tegen-angst-en-haat" target="_blank" rel="noopener">RTV Noord — De Straat Op tegen angst en haat</a>
+                    <a href="https://www.rtvnoord.nl/politiek/1343112/duizenden-groningers-demonstreren-tegen-situatie-gaza" target="_blank" rel="noopener">RTV Noord — Duizenden Groningers demonstreren tegen situatie Gaza</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="card">
+                <h2 class="section-title">Contact</h2>
+                <p>Wil je met ons samenwerken of heb je een vraag? Stuur een bericht via onze Signal-groep of e-mail (link hieronder).</p>
+                <p><strong>E-mailadres:</strong> <a href="mailto:info@collectiefactivismegroningen.org">info@collectiefactivismegroningen.org</a></p>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
         <p>&copy; 2026 Collectief Activisme Groningen. Alle rechten voorbehouden.</p>
     </footer>
