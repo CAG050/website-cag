@@ -50,13 +50,19 @@
         .nav-links a:hover{background:rgba(0,0,0,0.08)}
 
         .hero{
-            padding:5rem 1.5rem 5.5rem;
+            aspect-ratio: 1600 / 962; /* photo is 1600x1069; this shows ~90% of its height instead of cropping to a fixed box */
+            min-height:420px; /* keeps the headline/button readable on narrow phones where the ratio alone would make it too short */
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding:1.5rem;
             text-align:center;
             position:relative;
             overflow:hidden;
             background:
                 linear-gradient(180deg, rgba(61,20,32,0.55) 0%, rgba(61,20,32,0.72) 100%),
-                url('images/hero-groningen.jpg') center 30% / cover no-repeat;
+                url('images/hero-groningen.jpg') center center / cover no-repeat;
         }
         .hero h1{font-size:2.8rem;font-weight:800;color:#fdf6e3;margin:0;letter-spacing:-0.01em;text-shadow:0 2px 12px rgba(0,0,0,0.35)}
         .hero p.lead{font-size:1.08rem;color:#fdf6e3;opacity:0.95;max-width:820px;margin:1.1rem auto;text-shadow:0 1px 8px rgba(0,0,0,0.3)}
